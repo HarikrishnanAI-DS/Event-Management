@@ -1,0 +1,108 @@
+.login-container {
+    min-height: calc(100vh - 56px);
+    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-light) 100%);
+    padding: 80px 0;
+}
+
+.login-container .card {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #2d3436 0%, #353b48 100%);
+    border: 1px solid #4a4a4a;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.login-container .card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 30px rgba(108, 92, 231, 0.2);
+}
+
+.login-container .card-body {
+    padding: 3rem;
+}
+
+.login-container .form-control {
+    border-radius: 0 8px 8px 0;
+    height: 45px;
+    background-color: #353b48;
+    border: 1px solid #4a4a4a;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.login-container .input-group-text {
+    border-radius: 8px 0 0 8px;
+    background-color: #353b48;
+    border: 1px solid #4a4a4a;
+    border-right: none;
+    color: var(--text-secondary);
+}
+
+.login-container .form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+    background-color: #353b48;
+}
+
+.login-container .input-group-text i {
+    width: 16px;
+    color: var(--secondary-color);
+}
+
+.login-container .btn {
+    height: 45px;
+    font-weight: 500;
+    border-radius: 8px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-container .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.login-container .btn:hover::before {
+    opacity: 1;
+}
+
+.login-container .btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.login-container .form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.login-container a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.login-container .alert {
+    background-color: rgba(214, 48, 49, 0.1);
+    border-color: var(--danger-color);
+    color: #ff7675;
+}
+
+.login-container .spinner-border {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-width: 0.15em;
+}

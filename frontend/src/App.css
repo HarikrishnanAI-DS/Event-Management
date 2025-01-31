@@ -1,0 +1,176 @@
+/* Add Bootstrap Icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-dark);
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    padding: 1rem 0;
+    background: linear-gradient(to right, var(--background-dark), var(--background-light));
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-primary) !important;
+}
+
+.navbar-brand i {
+    color: var(--secondary-color);
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    color: var(--text-secondary) !important;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: var(--text-primary) !important;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link i {
+    color: var(--secondary-color);
+}
+
+.btn-glow {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    border: none;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(108, 92, 231, 0.5);
+}
+
+.btn-glow:hover::before {
+    opacity: 1;
+}
+
+.btn-glow span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-glow-secondary {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border: none;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 206, 201, 0.3);
+}
+
+.btn-glow-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.btn-glow-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 206, 201, 0.5);
+}
+
+.btn-glow-secondary:hover::before {
+    opacity: 1;
+}
+
+.btn-glow-secondary span {
+    position: relative;
+    z-index: 1;
+}
+
+.footer {
+    background: linear-gradient(to right, var(--background-dark), var(--background-light));
+    padding: 1.5rem 0;
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Card styles */
+.card {
+    background: linear-gradient(145deg, #2d3436 0%, #353b48 100%);
+    border: 1px solid #4a4a4a;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(108, 92, 231, 0.2);
+    border-color: var(--primary-color);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background-light);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
